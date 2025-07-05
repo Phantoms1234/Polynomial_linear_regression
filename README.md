@@ -32,46 +32,47 @@ You can install them using pip:
 pip install numpy pandas matplotlib
 
 ```
-##How to Use
 
--Save the Script: Save the provided Python code as a .py file (e.g., linear_reg.py).
+## How to Use
 
--Prepare Your Data: Ensure you have a CSV file named heat_capaacity_ethane.csv in the same directory as the script. The CSV file should contain two columns, with the first column representing the 'y' values (dependent variable) and the second column representing the 'x' values (independent variable).
+- Save the Script: Save the provided Python code as a .py file (e.g., linear_reg.py).
 
--Run the Script: Open a terminal or command prompt, navigate to the directory where you saved the script and the CSV file, and run the script using Python:
+- Prepare Your Data: Ensure you have a CSV file named heat_capaacity_ethane.csv in the same directory as the script. The CSV file should contain two columns, with the first column representing the 'y' values (dependent variable) and the second column representing the 'x' values (independent variable).
+
+- Run the Script: Open a terminal or command prompt, navigate to the directory where you saved the script and the CSV file, and run the script using Python:
 
 ```python
 python linear_reg.py
 
 ```
 
--Enter Polynomial Degree: The script will prompt you to enter the desired degree for the polynomial model. Enter an integer (e.g., 1 for linear, 2 for quadratic, 3 for cubic, etc.) and press Enter.
+- Enter Polynomial Degree: The script will prompt you to enter the desired degree for the polynomial model. Enter an integer (e.g., 1 for linear, 2 for quadratic, 3 for cubic, etc.) and press Enter.
 
--View the Plot: A Matplotlib plot will appear, displaying your experimental data points and the generated polynomial regression curve. The calculated coefficients will also be printed to the console.
+- View the Plot: A Matplotlib plot will appear, displaying your experimental data points and the generated polynomial regression curve. The calculated coefficients will also be printed to the console.
 
-##Code Overview
+## Code Overview
 
 The script performs the following main steps:
 
--Imports: Imports numpy for numerical operations, pandas for data handling, and matplotlib.pyplot for plotting.
+- Imports: Imports numpy for numerical operations, pandas for data handling, and matplotlib.pyplot for plotting.
 
--Data Loading & Preprocessing:
+- Data Loading & Preprocessing:
 
--Loads data from heat_capaacity_ethane.csv into a Pandas DataFrame.
+- Loads data from heat_capaacity_ethane.csv into a Pandas DataFrame.
 
--Renames columns to "y" and "x" for clarity.
+- Renames columns to "y" and "x" for clarity.
 
--Extracts 'y' and 'x' values into NumPy arrays.
+- Extracts 'y' and 'x' values into NumPy arrays.
 
--Calculates an extended X range using np.linspace for smoother plotting of the regression model.
+- Calculates an extended X range using np.linspace for smoother plotting of the regression model.
 
--Matrix Construction (B):
+- Matrix Construction (B):
 
--Constructs the design matrix B required for polynomial regression. For a polynomial of degree D, B will have columns corresponding to x^0 (ones), x^1, x^2, ..., x^D.
+- Constructs the design matrix B required for polynomial regression. For a polynomial of degree D, B will have columns corresponding to x^0 (ones), x^1, x^2, ..., x^D.
 
--Coefficient Calculation (sol):
+- Coefficient Calculation (sol):
 
--Applies the normal equation for linear least squares regression to find the optimal polynomial coefficients:
+- Applies the normal equation for linear least squares regression to find the optimal polynomial coefficients:
 
 
 \mathbf{\beta} = (\mathbf{B}^T \mathbf{B})^{-1} \mathbf{B}^T \mathbf{y}
@@ -79,19 +80,19 @@ The script performs the following main steps:
 
 where \\mathbf{\\beta} is the vector of coefficients (sol), \\mathbf{B} is the design matrix, and \\mathbf{y} is the vector of dependent variables. np.linalg.solve is used for efficient and stable solution.
 
--The calculated coefficients are printed to the console.
+- The calculated coefficients are printed to the console.
 
--Model Prediction (Y):Uses the calculated coefficients (sol) and the extended X range to compute the predicted Y values for the regression curve.
+- Model Prediction (Y):Uses the calculated coefficients (sol) and the extended X range to compute the predicted Y values for the regression curve.
 
--Plotting:
+- Plotting:
 
--Generates a scatter plot of the original experimental data points.
+- Generates a scatter plot of the original experimental data points.
 
--Generates a line plot of the polynomial regression model.
+- Generates a line plot of the polynomial regression model.
 
--Adds a legend and displays the plot.
+- Adds a legend and displays the plot.
 
--This script provides a solid foundation for understanding and applying polynomial regression in Python.
+- This script provides a solid foundation for understanding and applying polynomial regression in Python.
 
 
-** Please note that this readme was generated using AI**
+**Please note that this readme was generated using AI**
