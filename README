@@ -1,30 +1,30 @@
-#Polynomial Regression Calculator
+# Polynomial Regression Calculator
 
 This Python script provides a simple yet effective tool for performing polynomial regression on experimental data loaded from a CSV file. It allows you to model the relationship between two variables using a polynomial equation of a user-defined degree, visualize the experimental data, and compare it against the fitted regression model.
 
-##Features
+## Features
 
--**Data Loading**: Reads experimental data from a .csv file into a Pandas DataFrame.
+- ** Data Loading **: Reads experimental data from a .csv file into a Pandas DataFrame.
 
--**Dynamic Polynomial Degree**: Allows the user to specify the degree of the polynomial for the regression model.
+- **Dynamic Polynomial Degree**: Allows the user to specify the degree of the polynomial for the regression model.
 
--**Coefficient Calculation**: Uses NumPy's linear algebra capabilities to efficiently calculate the polynomial coefficients.
+- **Coefficient Calculation**: Uses NumPy's linear algebra capabilities to efficiently calculate the polynomial coefficients.
 
--**Model Generation**: Constructs the polynomial regression model based on the calculated coefficients.
+- **Model Generation**: Constructs the polynomial regression model based on the calculated coefficients.
 
--**Visualization**: Plots the original experimental data points alongside the fitted polynomial regression curve using Matplotlib.
+- **Visualization**: Plots the original experimental data points alongside the fitted polynomial regression curve using Matplotlib.
 
--**Extended Plotting Range**: Automatically extends the x-axis range slightly beyond the min/max of the experimental data for better visualization of the model's behavior.
+- **Extended Plotting Range**: Automatically extends the x-axis range slightly beyond the min/max of the experimental data for better visualization of the model's behavior.
 
-##Requirements
+## Requirements
 
 To run this script, you need to have the following Python libraries installed:
 
--**numpy**
+- **numpy**
 
--**pandas**
+- **pandas**
 
--**matplotlib**
+- **matplotlib**
 
 You can install them using pip:
 
