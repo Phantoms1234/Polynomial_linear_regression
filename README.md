@@ -68,21 +68,23 @@ The script performs the following main steps:
 
 - Matrix Construction (B):
 
-- Constructs the design matrix B required for polynomial regression. For a polynomial of degree D, B will have columns corresponding to x^0 (ones), x^1, x^2, ..., x^D.
+- Constructs the design matrix B required for polynomial regression. For a polynomial of degree D, B will have columns corresponding to $x^0$ (ones), $x^1$, $x^2$, ..., $x^D$.
 
 - Coefficient Calculation (sol):
 
 - Applies the normal equation for linear least squares regression to find the optimal polynomial coefficients:
 
 
+$$ 
 \mathbf{\beta} = (\mathbf{B}^T \mathbf{B})^{-1} \mathbf{B}^T \mathbf{y}
+$$
 
 
-where \\mathbf{\\beta} is the vector of coefficients (sol), \\mathbf{B} is the design matrix, and \\mathbf{y} is the vector of dependent variables. np.linalg.solve is used for efficient and stable solution.
+where $\\mathbf{\\beta}$ is the vector of coefficients (sol), $\\mathbf{B}$ is the design matrix, and $\\mathbf{y}$ is the vector of dependent variables. `np.linalg.solve` is used for efficient and stable solution.
 
 - The calculated coefficients are printed to the console.
 
-- Model Prediction (Y):Uses the calculated coefficients (sol) and the extended X range to compute the predicted Y values for the regression curve.
+- Model Prediction (Y):Uses the calculated coefficients `(sol)` and the extended `X` range to compute the predicted `Y` values for the regression curve.
 
 - Plotting:
 
