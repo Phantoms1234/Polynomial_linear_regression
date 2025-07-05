@@ -4,7 +4,7 @@ This Python script provides a simple yet effective tool for performing polynomia
 
 ## Features
 
-- ** Data Loading **: Reads experimental data from a .csv file into a Pandas DataFrame.
+- **Data Loading**: Reads experimental data from a .csv file into a Pandas DataFrame.
 
 - **Dynamic Polynomial Degree**: Allows the user to specify the degree of the polynomial for the regression model.
 
