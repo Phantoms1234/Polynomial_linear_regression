@@ -30,12 +30,33 @@ for n in range(1,degree+1):
 
 # using linear algebra to find our coefficients for the model
 sol=np.linalg.solve(B.T@B, B.T@y)
-print(sol)
+
 # populating the values to be plotted in an array
 
 Y=0
 for n in range(len(sol)):
 	Y+=sol[n]*(X**(n))
+
+#displaying the polynomial equation
+def print_equation(a):
+	message=f' '
+	n=0
+	for char in a:
+		if n==0:
+			message+=f'{char} + '
+			n+=1
+
+		elif n==len(a)-1:
+			message+=f'({char})x^{n} '
+			n+=1
+
+		else:
+			message+=f'({char})x^{n} + '
+			n+=1
+
+	print(message)
+
+print_equation(sol)
 
 
 #plotting all
